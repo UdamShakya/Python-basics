@@ -44,3 +44,19 @@ else:
     grade = "F"
 
 print(f"Your grade is {grade}")
+
+students = {
+    "Alice": [85, 90, 92],
+    "Bob": [70, 65, 80],
+    "Charlie": [95, 100, 98],
+}
+
+for student, marks in students.items():
+    avg = sum(marks) / len(marks)
+    status = "Pass" if avg >= 50 else "Fail"
+    print(f"{student} → Average: {avg:.2f}, Status: {status}")
+
+count = 0
+while count < 3:
+    print("While loop demo:", count)
+    count += 1
