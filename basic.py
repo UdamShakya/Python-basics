@@ -60,3 +60,33 @@ count = 0
 while count < 3:
     print("While loop demo:", count)
     count += 1
+
+    # functions_files.py
+
+def save_student_grade(name, scores, filename="grades.txt"):
+    avg = sum(scores) / len(scores)
+    grade = (
+        "A" if avg >= 90 else
+        "B" if avg >= 75 else
+        "C" if avg >= 60 else
+        "D" if avg >= 40 else
+        "F"
+    )
+    
+    result = f"{name}: {avg:.2f} ({grade})\n"
+    
+    # Write to file
+    with open(filename, "a") as file:
+        file.write(result)
+    
+    return result
+
+# Example usage
+students = {
+    "Alice": [85, 90, 92],
+    "Bob": [70, 65, 80],
+    "Charlie": [95, 100, 98],
+}
+
+for student, marks in students.items():
+    print(save_student_grade(student, marks))
