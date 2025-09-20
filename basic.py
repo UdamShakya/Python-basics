@@ -27,3 +27,20 @@ def calculate(a, b):
 results = calculate(10, 3)
 for operation, result in results.items():
     print(f"{operation.capitalize()}: {result}")
+
+
+# grading.py
+score = int(input("Enter your exam score: "))
+
+if score >= 90:
+    grade = "A"
+elif score >= 75:
+    grade = "B"
+elif score >= 60:
+    grade = "C"
+elif score >= 40:
+    grade = "D"
+else:
+    grade = "F"
+
+print(f"Your grade is {grade}")
