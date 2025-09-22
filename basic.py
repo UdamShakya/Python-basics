@@ -144,3 +144,53 @@ import math_utils
 
 print("Square of 4:", math_utils.square(4))
 print("Cube of 3:", math_utils.cube(3))
+
+
+# Basic Car Class Example
+
+class Car:
+    def __init__(self, brand, speed=0):
+        self.brand = brand
+        self.speed = speed
+
+    def accelerate(self, value):
+        self.speed += value
+        print(f"{self.brand} accelerated. Speed: {self.speed} km/h")
+
+    def brake(self, value):
+        self.speed = max(0, self.speed - value)
+        print(f"{self.brand} slowed down. Speed: {self.speed} km/h")
+
+# Test
+my_car = Car("Toyota")
+my_car.accelerate(30)
+my_car.brake(10)
+
+# Inheritance Example
+
+class Car:
+    def __init__(self, brand, speed=0):
+        self.brand = brand
+        self.speed = speed
+
+    def accelerate(self, value):
+        self.speed += value
+        print(f"{self.brand} accelerated. Speed: {self.speed} km/h")
+
+    def brake(self, value):
+        self.speed = max(0, self.speed - value)
+        print(f"{self.brand} slowed down. Speed: {self.speed} km/h")
+
+class ElectricCar(Car):
+    def __init__(self, brand, battery_capacity, speed=0):
+        super().__init__(brand, speed)
+        self.battery_capacity = battery_capacity
+
+    def charge(self):
+        print(f"{self.brand} is charging... Battery: {self.battery_capacity} kWh")
+
+# Test
+tesla = ElectricCar("Tesla", 75)
+tesla.accelerate(50)
+tesla.brake(20)
+tesla.charge()
