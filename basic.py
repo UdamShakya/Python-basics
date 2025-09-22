@@ -128,3 +128,19 @@ def is_prime(n):
 # Test
 print("Factorial of 5:", factorial(5))
 print("Is 17 prime?", is_prime(17))
+
+# Custom math module
+
+def square(n):
+    return n * n
+
+def cube(n):
+    return n * n * n
+
+
+# Using the custom math module
+
+import math_utils
+
+print("Square of 4:", math_utils.square(4))
+print("Cube of 3:", math_utils.cube(3))
